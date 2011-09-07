@@ -17,7 +17,7 @@ module FaradayStack
     case adapter_name
     when 'Yajl::Parser'
       define_parser do |body|
-        Yajl::Parser.parse(body)
+        Yajl::Parser.parse(body, :symbolize_keys => true)
       end
     when 'ActiveSupport::JSON'
       define_parser do |body|

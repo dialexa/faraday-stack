@@ -6,7 +6,7 @@ module FaradayStack
     end
     
     define_parser do |body|
-      Nokogiri::XML body
+      NokogiriHash.new body
     end
   end
 end
