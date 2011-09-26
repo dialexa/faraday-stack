@@ -1,12 +1,11 @@
 module FaradayStack
   class ResponseXML < ResponseMiddleware
     dependency do
-      require 'nokogiri'
-      Nokogiri::XML
+      require 'active_support'
     end
     
     define_parser do |body|
-      NokogiriHash.new body
+      Hash.from_xml body
     end
   end
 end

@@ -2,7 +2,6 @@
 require 'faraday'
 require 'forwardable'
 require 'faraday_stack/addressable_patch'
-require 'faraday_stack/nokogiri_hash'
 
 module FaradayStack
   extend Faraday::AutoloadHelper
